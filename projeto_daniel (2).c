@@ -129,6 +129,7 @@
 	     printf("\t1 - Registrar itens\n");
 	     printf("\t2 - Consultar itens\n");
 	     printf("\t3 - Deletar itens\n\n"); 
+	     printf("\t4 - Sair do sistema\n\n");
 		 printf("Opcção: "); //Fim do menu
 	
    	     scanf("%d", &opcao); //Armazenando a escolha do usuario
@@ -150,10 +151,15 @@
 			 deletar();
 			 break;
 			 
+			 case 4:
+			 	printf("Obrigado por utilizar o sistema!\n");
+			 	return 0;
+			 	break;
+			 
 			 default:
-			 printf("esta opcao nao esta disponivel\n");
-			 system("pause");
-			 break;		
+			 	printf("esta opcao nao esta disponivel\n");
+			 	system("pause");
+			 	break;		
 	     		
 		 }
 	     }
