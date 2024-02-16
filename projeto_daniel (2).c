@@ -1,10 +1,10 @@
-#include <stdio.h> //biblioteca de comunicação com o usuário
-#include <stdlib.h> //biblioteca de alocação de memória
-#include <locale.h> //biblioteca de alocação de texto por região
-#include <string.h> //biblioteca respomsável por cuida das string
+#include <stdio.h> //biblioteca de comunicaï¿½ï¿½o com o usuï¿½rio
+#include <stdlib.h> //biblioteca de alocaï¿½ï¿½o de memï¿½ria
+#include <locale.h> //biblioteca de alocaï¿½ï¿½o de texto por regiï¿½o
+#include <string.h> //biblioteca respomsï¿½vel por cuida das string
 
-		int registro() // ponto e virgola so pra intrucao sem ponto e virgula e pra funcao
-	     {
+		int registro()// ponto e virgola so pra intrucao sem ponto e virgula e pra funcao
+			{ 
 			 char arquivo[40];
 			 char cpf[40];
 			 char nome[40];
@@ -56,11 +56,10 @@
 				 fclose(file);
 			 
 			 system("pause");
-			  
-	     }
+			}
 	
 		int consulta()
-	     {
+	    {
 	     	setlocale(LC_ALL, "portuguese"); //Definindo a limguagem
 	     	
 			 char cpf[40];
@@ -75,26 +74,26 @@
 			 if(file == NULL)
 			 
 			 {
-			 	printf("Não foi possivel abrir o arquivo, não localizado!.\n");
+			 	printf("Nï¿½o foi possivel abrir o arquivo, nï¿½o localizado!.\n");
 			 	system("pause");
 			 }
 			 
 			 while(fgets(conteudo, 200, file) != NULL)
 			 {
-			 	printf("\nEssas são as informações do usuário: ");
+			 	printf("\nEssas sï¿½o as informaï¿½ï¿½es do usuï¿½rio: ");
 			 	printf("%s" ,conteudo);
 			 	printf("\n\n");
 			 	system("pause");
 			 }
 			 	
-			 }
+		}
 	
 	
 		int deletar()
-	     {
+	    {
 	     	char cpf[40];
 	     	
-			 printf("Digite o cpf do usuário a ser deletado: ");
+			 printf("Digite o cpf do usuï¿½rio a ser deletado: ");
 			 scanf("%s" ,cpf);
 			 
 			 remove(cpf);
@@ -105,65 +104,63 @@
 			 if(file == NULL)
 			 
 			 {
-			 	printf("O usuário foi deletado com susseso!.\n");
+			 	printf("O usuï¿½rio foi deletado com susseso!.\n");
 			 	system("pause");
 			 }
          }
          
          
-   int main() //FUNÇÃO PRICIPAL DO NUCLEO DO PROJETO
-   
-         {
+   int main() //FUNï¿½ï¿½O PRICIPAL DO NUCLEO DO PROJETO
+    {
 		 int opcao=0; //Definindo as variaveis
 		 int laco=1;
 	
-    for(laco=1;laco=1;)
-	 {
-	
-	     system("cls");
-	
-	     setlocale(LC_ALL, "portuguese"); //Definindo a limguagem
-	
-         printf("### gestao de pedidos ###\n\n"); //Incluindo o menu
-	     printf("Escolha a opcao desejada do menu:\n\n");
-	     printf("\t1 - Registrar itens\n");
-	     printf("\t2 - Consultar itens\n");
-	     printf("\t3 - Deletar itens\n\n"); 
-	     printf("\t4 - Sair do sistema\n\n");
-		 printf("Opcção: "); //Fim do menu
-	
-   	     scanf("%d", &opcao); //Armazenando a escolha do usuario
-	
-	     system("cls");
-	     
-	     
-    switch(opcao) // Variavel
-	     {
-		     case 1:
-		     registro();
-			 break;
-			 
-			 case 2:
-			 consulta();
-		     break;
-			 
-			 case 3:
-			 deletar();
-			 break;
-			 
-			 case 4:
-			 	printf("Obrigado por utilizar o sistema!\n");
-			 	return 0;
-			 	break;
-			 
-			 default:
-			 	printf("esta opcao nao esta disponivel\n");
-			 	system("pause");
-			 	break;		
-	     		
-		 }
-	     }
-		 }
+    	for(laco=1;laco=1;)
+	 	{                           
+			system("cls");
+		
+			setlocale(LC_ALL, "portuguese"); //Definindo a limguagem
+		
+			printf("### gestao de pedidos ###\n\n"); //Incluindo o menu
+			printf("Escolha a opcao desejada do menu:\n\n");
+			printf("\t1 - Registrar itens\n");
+			printf("\t2 - Consultar itens\n");
+			printf("\t3 - Deletar itens\n\n"); 
+			printf("\t4 - Sair do sistema\n\n");
+			printf("Opcï¿½ï¿½o: "); //Fim do menu
+		
+			scanf("%d", &opcao); //Armazenando a escolha do usuario
+		
+			system("cls");
+			
+			
+			switch(opcao) // Variavel
+			{
+				case 1:
+				registro();
+				break;
+				
+				case 2:
+				consulta();
+				break;
+				
+				case 3:
+				deletar();
+				break;
+				
+				case 4:
+					printf("Obrigado por utilizar o sistema!\n");
+					return 0;
+					break;
+				
+				default:
+					printf("esta opcao nao esta disponivel\n");
+					system("pause");
+					break;		
+					
+			}
+	    }
+	}
 	
 
     
